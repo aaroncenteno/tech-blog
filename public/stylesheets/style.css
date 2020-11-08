@@ -153,6 +153,15 @@ background-color: #d41414;
    padding: 20px 0 10px 20px;
 }
 
+.post-author {
+    position: relative; left: 430px;
+    background-color: black;
+    color: #5b8b00;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
 .post-body {
    padding: 0 20px 10px 20px;
 }
