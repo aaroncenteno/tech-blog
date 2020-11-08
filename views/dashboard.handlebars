@@ -1,18 +1,4 @@
-<section>
-    <h2>Create A Blog Post</h2>
-
-    <form class="new-post-form">
-        <div>
-            <label for="post-title">Title</label>
-            <input type="text" name="post-title" id="post-title">
-        </div>
-        <div>
-            <label for="post-body">Blog Post Text</label>
-            <textarea name="post-body" id="post-body" cols="30" rows="10"></textarea>
-        </div>
-        <button type="submit" class="btn">Create Post</button>
-    </form>
-</section>
+<button class="create-post">Create New Blog Post</button>
 
 {{#if posts.length}}
 <section>
@@ -28,4 +14,4 @@
 </section>
 {{/if}}
 
-<script src="/javascript/add-post.js"></script>
+<script src="/javascript/nav-createPost.js"></script>
