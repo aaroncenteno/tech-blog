@@ -37,11 +37,6 @@ button:hover {
     background-color: #80c501;
 }
 
-.post-list {
-    margin: 0;
-    padding: 0;
-}
-
 ol li {
     list-style: none;
     padding: 20px;
@@ -89,7 +84,7 @@ form label {
 }
 
 header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid black;
     display: inline-block;
     justify-content: space-between;
     align-items: center;
@@ -114,6 +109,7 @@ header nav button {
 
 header h1 a {
     background-color: black;
+    box-shadow: 10px 5px 5px  black;
     border-radius: 15px;
     width: 100%;
     font-size: 55px;
