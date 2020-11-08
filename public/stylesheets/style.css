@@ -12,17 +12,17 @@
   
 a {
     text-decoration: none;
-    color: #225ca3;
+    color: #5b8b00;
     font-weight: bold;
     transition: color .1s;
 }
 
 a:hover {
-    color: #3486eb;
+    color: #80c501;
 }
 
 button {
-    background-color: #225ca3;
+    background-color: #5b8b00;
     border: 0;
     padding: 1%;
     color: white;
@@ -33,14 +33,14 @@ button {
 }
 
 button:hover {
-    background-color: #3486eb;
+    background-color: #80c501;
 }
 
 .post-list {
     margin: 0;
     padding: 0;
 }
-
+/* 
 textarea, input {
     padding: .5%;
     border-radius: 5px;
@@ -49,13 +49,13 @@ textarea, input {
 
 textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
-}
+    border: 1px solid #5b8b00;
+} */
 
-textarea {
+/* textarea {
     min-width: 40%;
     min-height: 100px;
-}
+} */
 
 form > div {
     margin-bottom: 2%;
@@ -76,14 +76,34 @@ form label {
 
 header {
     border-bottom: 1px solid #ccc;
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    background-color: #5b8b00;
 }
 
-header h1 {
-font-size: 1em;
+header nav {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+header nav a,
+header nav button {
+    margin-right: 20px;
+    padding: 5px;
+    background-color: black;
+    align-items: center;
+    border-radius: 15px;
+}
+
+
+header h1 a {
+    background-color: black;
+    border-radius: 15px;
+    width: 100%;
+    font-size: 55px;
+    padding: 10px;
 }
 
 main {
@@ -92,21 +112,18 @@ main {
 }
 
 .btn-no-style {
-    background: none;
     border: none;
-    padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: #5b8b00;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
-    margin-left: 16px;
 }
 
 .btn-no-style:hover {
-    background: none;
-    color: #3486eb;
+    background: black;
+    color: #80c501;
 }
 
 .delete-post-btn {
@@ -122,6 +139,12 @@ background-color: #d41414;
     line-height: 150%;
 }
 
+#post-body {
+    width: 50vw;
+    height: 40vh;
+    overflow: hidden scroll;
+}
+
 .post .title span {
     font-style: italic;
     font-size: 90%;
@@ -131,15 +154,6 @@ background-color: #d41414;
 .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-    background-color: #1f9c13;
 }
 
 .comment-form {
@@ -168,13 +182,18 @@ background-color: #d41414;
 .edit-post-form {
     margin-bottom: 5%; 
 }
-
 footer {
-    border-top: 1px solid #ccc;
+    background-color: #5b8b00;
+}
+
+
+footer h2{
+    color: #5b8b00;
     display: flex;
     justify-content: center;
-    padding: 1%;
-    font-size: 110%;
+    background-color: black;
+    margin: 10px 400px 10px 400px;
+    border-radius: 15px;
 }
 
 .hide {

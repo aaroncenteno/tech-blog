@@ -11,9 +11,6 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>
-                <a href="/">Tech Blog</a>
-            </h1>
             <nav>
                 <a href="/">Home</a>
                 {{#if loggedIn}}
@@ -24,12 +21,15 @@
                 <a href="/login">Login</a>
                 {{/if}}
             </nav>
+            <h1>
+                <a href="/">Tech Blog</a>
+            </h1>
         </header>
         <main>
             {{{ body }}}
         </main>
         <footer>
-            Thanks for visiting
+            <h2>Thanks for posting!</h2>
         </footer>
     </div>
     {{#if loggedIn}}
