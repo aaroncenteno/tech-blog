@@ -195,7 +195,8 @@ background-color: #d41414;
     overflow: hidden scroll;
 }
 
-#taken {
+#taken,
+#not-found {
     color: #5b8b00;
     background-color: black;
     padding: 5px;

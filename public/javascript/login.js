@@ -3,8 +3,22 @@ async function loginFormHandler(event) {
 
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
+    const notFound = document.querySelector('#not-found');
 
     if (username && password) {
+        const getUsers = await fetch('/api/users').then(
+            function(response) {
+                response.json().then(function(data) {
+                    for (let i = 0; i < data.length; i++) {
+                        if(username != data[i].username) {
+                            notFound.classList.remove('hide');
+                            return;
+                        }
+                    }
+                })
+            }
+        );
+
         const response = await fetch('/api/users/login', {
             method: 'post',
             body: JSON.stringify({
@@ -17,7 +31,7 @@ async function loginFormHandler(event) {
         if(response.ok) {
             document.location.replace('/dashboard');
         } else {
-            alert(response.statusText);
+            // alert(response.statusText);
         }
     }
 }
