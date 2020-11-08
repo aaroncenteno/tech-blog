@@ -32,6 +32,9 @@ async function signupFormHandler(event) {
 
         if(response.ok) {
             console.log('success');
+            takenUsername.classList.add('hide');
+            document.location.replace('/dashboard');
+
          } else {
             console.log(response.statusText);
         }

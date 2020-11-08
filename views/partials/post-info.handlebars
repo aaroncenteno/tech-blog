@@ -1,8 +1,10 @@
 <article class="post">
     <div class="title">
-        <h4>{{title}}</h4>
+        <a href="/post/{{id}}">{{title}}</a>
     </div>
     <div class="post-body">
         <p>{{post_body}}</p>
+        |
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>
 </article>
