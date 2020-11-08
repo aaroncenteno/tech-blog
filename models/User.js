@@ -8,7 +8,6 @@ class User extends Model {
     }
 }
 
-// Defin table columns and cofiguration
 User.init(
     {
         id: {

@@ -121,6 +121,11 @@ main {
     padding: 2% 4%;
 }
 
+.login-form,
+.signup-form {
+    position: relative; left: 450px;
+}
+
 .btn-no-style {
     border: none;
     cursor: pointer;
@@ -164,7 +169,8 @@ background-color: #d41414;
 }
 
 .post-author {
-    position: relative; left: 430px;
+    float: right;
+    margin-right: 30px !important;
     background-color: black;
     color: #5b8b00;
     padding: 5px;
