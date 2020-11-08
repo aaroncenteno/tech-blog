@@ -71,7 +71,7 @@ router.post('/', (req, res)=> {
     });
 });
 
-router.post('login', (req, res) => {
+router.post('/login', (req, res) => {
     User.findOne({
         where: {
             username: req.body.username
@@ -98,7 +98,7 @@ router.post('login', (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-    if(req.session.log) {
+    if(req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
         });

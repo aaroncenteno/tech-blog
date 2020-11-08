@@ -3,8 +3,24 @@ async function signupFormHandler(event) {
 
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-
+    const takenUsername = document.querySelector('#taken');
+    
     if (username && password) {
+        // get all users and compare username
+        const getUsers = await fetch('/api/users').then(
+            function(response) {
+                response.json().then(function(data) {
+                    for (let i = 0; i < data.length; i++) {
+                        if(username === data[i].username) {
+                            // alert('That username is already taken! Please try again.');
+                            takenUsername.classList.remove('hide');
+                            return;
+                        }
+                    }
+                })
+            }
+        );
+
         const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
@@ -16,8 +32,8 @@ async function signupFormHandler(event) {
 
         if(response.ok) {
             console.log('success');
-        } else {
-            alert(response.statusText);
+         } else {
+            console.log(response.statusText);
         }
     }
 }
@@ -29,7 +45,7 @@ async function loginFormHandler(event) {
     event.preventDefault();
 
     const username = document.querySelector('#username-login').value.trim();
-    const password = document.querySelector('#password-login').value.trime();
+    const password = document.querySelector('#password-login').value.trim();
 
     if (username && password) {
         const response = await fetch('/api/users/login', {
