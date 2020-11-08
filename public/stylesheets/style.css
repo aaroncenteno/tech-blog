@@ -71,6 +71,12 @@ form > div {
 
 form label {
     display: block;
+    background-color: black;
+    color: #5b8b00;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    width: fit-content;
+    margin-bottom: 10px;
 }
 
 .wrapper {
@@ -142,10 +148,18 @@ background-color: #d41414;
     background-color: #ff643d;
 }
 
+.create-post {
+    position: relative; left: 400px;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+}
+
 .post {
     height: auto;
     margin-bottom: 2%; 
     background-color: rgb(193, 197, 175);
+    border: 2px #5b8b00 solid;
     border-radius: 15px;
 }
 
@@ -159,11 +173,12 @@ background-color: #d41414;
     color: #5b8b00;
     padding: 5px;
     border-radius: 15px;
+    border: 2px #5b8b00 solid;
     font-size: 13px;
 }
 
 .post-body {
-   padding: 0 20px 10px 20px;
+   padding: 20px 20px 10px 20px;
 }
 
 .post-body a {
@@ -171,6 +186,7 @@ background-color: #d41414;
     background-color: black;
     padding: 5px;
     border-radius: 15px;
+    border: 2px #5b8b00 solid;
 }
 
 #post-body {
@@ -179,10 +195,20 @@ background-color: #d41414;
     overflow: hidden scroll;
 }
 
+#taken {
+    color: #5b8b00;
+    background-color: black;
+    padding: 5px;
+    border-radius: 15px;
+    border: 2px #5b8b00 solid;
+    width: fit-content;
+}
+
 .post .title a {
     padding: 10px;
     background-color: black;
     border-radius: 15px;
+    border: 2px #5b8b00 solid;
     font-size: 20px;
     color: #5b8b00;
     margin: auto;
@@ -208,6 +234,7 @@ background-color: #d41414;
     padding: 1%;
     margin-bottom: 1%;
     border-radius: 15px;
+    border: 2px #5b8b00 solid;
 }
 
 .comment:nth-child(odd) {
@@ -217,6 +244,7 @@ background-color: #d41414;
 .comment .meta {
     width: fit-content;
     border-radius: 15px;
+    border: 2px #5b8b00 solid;
     padding: 4px;
     background-color: black;
     color: #5b8b00;
