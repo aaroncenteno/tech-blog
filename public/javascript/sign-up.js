@@ -12,7 +12,6 @@ async function signupFormHandler(event) {
                 response.json().then(function(data) {
                     for (let i = 0; i < data.length; i++) {
                         if(username === data[i].username) {
-                            // alert('That username is already taken! Please try again.');
                             takenUsername.classList.remove('hide');
                             return;
                         }
@@ -31,13 +30,9 @@ async function signupFormHandler(event) {
         });
 
         if(response.ok) {
-            console.log('success');
             takenUsername.classList.add('hide');
             document.location.replace('/dashboard');
-
-         } else {
-            console.log(response.statusText);
-        }
+         } 
     }
 }
 

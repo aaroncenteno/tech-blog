@@ -5,11 +5,9 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
     Comment.findAll()
     .then(dbPostData => {
-        console.log(dbPostData)
         return res.json(dbPostData)
     })
     .catch(err => {
-        console.log(err);
         res.status(500).json(err);
     });
 });
@@ -23,7 +21,6 @@ router.post('/', withAuth, (req, res) => {
         })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
-            console.log(err);
             res.status(400).json(err);
         });
     }
@@ -43,7 +40,6 @@ router.delete('/:id', withAuth, (req, res) => {
         res.json(dbPostData);
     })
     .catch(err => {
-        console.log(err);
         res.status(500).json(err);
     });
 });

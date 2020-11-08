@@ -4,7 +4,9 @@ async function loginFormHandler(event) {
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
     const notFound = document.querySelector('#not-found');
+    const passNotFound = document.querySelector('#pass-not-found');
 
+    // Loop Through Usernames and if one does not match notify user
     if (username && password) {
         const getUsers = await fetch('/api/users').then(
             function(response) {
@@ -30,8 +32,6 @@ async function loginFormHandler(event) {
 
         if(response.ok) {
             document.location.replace('/dashboard');
-        } else {
-            // alert(response.statusText);
         }
     }
 }
