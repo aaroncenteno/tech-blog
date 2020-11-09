@@ -12,7 +12,7 @@ async function loginFormHandler(event) {
             function(response) {
                 response.json().then(function(data) {
                     for (let i = 0; i < data.length; i++) {
-                        if(username != data[i].username) {
+                        if(username !== data[i].username) {
                             notFound.classList.remove('hide');
                             return;
                         }
