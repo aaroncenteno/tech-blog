@@ -21,12 +21,14 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
+  // Session expires after 5 minutes of inactivity
+  cookie: {expires: 1 * 300 * 1000},
+  resave: true,
+  rolling: true,
+  saveUninitialized: false,
   store: new SequelizeStore({
     db: sequelize
-  })
+  }),
 };
 
 app.use(session(sess));
