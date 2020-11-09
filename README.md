@@ -21,7 +21,7 @@ Run 'npm install' in the command line to install all the necessary dependencies 
 
 ## Usage
 
-To access this website navigat to <!-- website here  --> and create an account. The begin writing posts, reading posts and leaving comments!
+To access this website navigat to https://agile-waters-31192.herokuapp.com/ and create an account. Then begin writing posts, reading posts and leaving comments!
 
 ## Licenses
 
@@ -53,7 +53,9 @@ To access this website navigat to <!-- website here  --> and create an account. 
 
 ## Links
 
+Live Application: https://agile-waters-31192.herokuapp.com/
 
+GitHub Repo: https://github.com/aaroncenteno/tech-blog
 
 ## Questions
 
